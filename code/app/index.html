@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>众筹项目</title>
+  <link href='' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>众筹项目</h1>
+  <h2>简单版</h2>
+
+  <br><br><button id="create" onclick="App.createNew()">发起众筹</button>
+  <br><label for="addressNew">输入地址:</label><input type="text" id="addressNew" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><label for="goalNew">输入目标:</label><input type="text" id="goalNew" placeholder="e.g., 10000"></input>
+
+  <br><br><button id="check" onclick="App.checkInfo()">查询</button>
+  <br><label for="needer">输入查询地址:</label><input type="text" id="needer" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><span>目标是筹集 <span class="black"><span id="balance1"></span> META</span></span>
+  <br><span>已经筹集到 <span class="black"><span id="balance2"></span> META</span></span>
+  <br><span>已经捐献的人数 <span class="black"><span id="funderNum"></span></span></span>
+  <br><span>是否达到目标 <span class="black"><span id="isComplete"></span></span></span>
+
+  <br>
+  <h1>捐献出 MetaCoin</h1>
+  <br><label for="amount">数量:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+  <br><label for="receiver">被捐献者地址:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><span>你还剩 <span class="black"><span id="balance"></span> META</span></span>
+  <br><br><button id="send" onclick="App.sendCoin()">确认捐出</button>
+  <br><br>
+  <span id="status"></span>
+  <br>
+  <span class="hint"><strong>提示:</strong> 捐钱需谨慎，操作无法撤销.</span>
+</body>
+</html>
